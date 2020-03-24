@@ -13,7 +13,7 @@ ttmvc::setViewDir( __DIR__ . '/Views';
 $called = ttmvc::route([
   '/' => [
     'get' => ['MyController', 'home'],
-	'post' => ['MyController', 'home_post']
+	  'post' => ['MyController', 'home_post']
   ],
   '/product/([a-z0-9]*)/' => [
     'get' => ['MyController', 'product'],
@@ -38,12 +38,12 @@ class MyController {
     $name = $_POST['name'} ?? '';
     $data = ['name' => $name];
 	
-	ttmvc::view('/home.php', $data);
+    ttmvc::view('/home.php', $data);
   }
   
   public function product($product) {
     $data = ['product' => $product];
-	ttmvc::view('/home.php', $data);
+    ttmvc::view('/home.php', $data);
   }
 }
 ```
@@ -54,7 +54,7 @@ class MyController {
 <html>
   <body>
     <p>Name: <?= $name ?? 'No parameter [name] is passed.'; ?></p>
-	<p>Product: <?= $product ?? 'No parameter [product] is passed.'; ?></p>
+    <p>Product: <?= $product ?? 'No parameter [product] is passed.'; ?></p>
   </body>
 </html>
 ```
@@ -81,7 +81,8 @@ This library just uses *preg_match()* to see if the request url matches to the r
 ttmvc::route([
   '/' => [
     'get' => ['MyController', 'index'],
-	'post' => ['MyController', 'index_post']  
+    'post' => ['MyController', 'index_post']
+  ]
 ]);
 ```
 When accessing document root *("/")* with *"get"* http method, this code will call *index()* method in the *MyController* class.
@@ -126,10 +127,10 @@ For example, if you pass array('foo' => 'bar') to the view file, the value "bar"
 class MyController {
   public function example() {
     $data = [
-	  'foo' => 'bar'
-	];
-	
-	ttmvc::view('/example.php', $data);
+	    'foo' => 'bar'
+    ];
+
+    ttmvc::view('/example.php', $data);
   }
 }
 ```
