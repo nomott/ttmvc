@@ -1,0 +1,17 @@
+{
+    "name": "ttmvc/example",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../ttmvc"
+        }
+    ],
+    "require": {
+        "nomott/ttmvc": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "example\\": "app"
+        }
+    }
+}

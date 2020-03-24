@@ -1,0 +1,22 @@
+{
+    "name": "nomott/ttmvc",
+    "description": "tiny tiny mvc framework",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "ttmvc\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ttmvc\\Tests\\": "tests/"
+        }
+    }
+}
