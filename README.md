@@ -127,7 +127,7 @@ For example, if you pass array('foo' => 'bar') to the view file, the value "bar"
 class MyController {
   public function example() {
     $data = [
-	    'foo' => 'bar'
+      'foo' => 'bar'
     ];
 
     ttmvc::view('/example.php', $data);
