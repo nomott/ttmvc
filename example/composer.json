@@ -2,8 +2,8 @@
     "name": "ttmvc/example",
     "repositories": [
         {
-            "type": "path",
-            "url": "../ttmvc"
+            "type": "vcs",
+            "url": "https://github.com/nomott/ttmvc.git"
         }
     ],
     "require": {
